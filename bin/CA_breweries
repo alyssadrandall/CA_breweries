@@ -1,5 +1,5 @@
 require_relative "../lib/CA_breweries"
 
-CA_breweries::CLI.new.call
+CABreweries::CLI.new.call
 
 #puts "Hiiiiii" 
