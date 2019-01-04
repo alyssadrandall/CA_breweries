@@ -21,7 +21,17 @@ class Brewery
   
   def initialize(brewery_hash)
     @name = brewery_hash["name"]
-    @brewery_type = brewery_hash[""]
+    @brewery_type = brewery_hash["brewery type"]
+    @street = brewery_hash["street"]
+    @city = brewery_hash["city"]
+    @postal_code = brewery_hash["postal code"]
+    @phone = brewery_hash["phone"]
+    @website_url = brewery_hash["website url"]
+    brewery_hash.each do |method, arg|
+      if self.respond_to?("#{method}=")
+        self.send("#{method}=", arg)
+      end 
+    end  
   end 
   
   def save 
@@ -29,3 +39,8 @@ class Brewery
     self
   end
 end  
+
+breweries.collect do |brewery_hash|
+  brewery = Brewery.new(brewery_hash)
+  brewery.save
+end 
