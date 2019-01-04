@@ -12,3 +12,5 @@ require "CA_breweries"
 
 require "irb"
 IRB.start(__FILE__)
+
+puts "Stuff and Things"
