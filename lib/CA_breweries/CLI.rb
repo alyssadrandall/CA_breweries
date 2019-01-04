@@ -1,4 +1,4 @@
-class CA_breweries::CLI 
+class CABreweries::CLI 
   def call 
     puts "hey from cli"
   end 
