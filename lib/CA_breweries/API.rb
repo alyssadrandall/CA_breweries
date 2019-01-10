@@ -17,23 +17,23 @@ class CABreweries::API
 end 
 
 
-class CABreweries::API 
-BASE_URL= "https://api.openbrewerydb.org/breweries?by_state=CA&per_page=50"
+# class CABreweries::API 
+# BASE_URL= "https://api.openbrewerydb.org/breweries?by_state=CA&per_page=50"
 
-  def self.get_breweries_by_city(city)
-    results = RestClient.get("#{BASE_URL}&by_city=#{city}")
+#   def self.get_breweries_by_city(city)
+#     results = RestClient.get("#{BASE_URL}&by_city=#{city}")
 
-    json = JSON.parse(results)
-    json["results"].each do |brewery_hash|
-      CABreweries::Brewery.new(brewery_hash)
-    end
-  end 
+#     json = JSON.parse(results)
+#     json["results"].each do |brewery_hash|
+#       CABreweries::Brewery.new(brewery_hash)
+#     end
+#   end 
 
-  def self.get_breweries_by_name(name)
-    results = RestClient.get("#{BASE_URL}&by_name=#{name}")
+#   def self.get_breweries_by_name(name)
+#     results = RestClient.get("#{BASE_URL}&by_name=#{name}")
 
-    json = JSON.parse(results)
-    name.update(json) 
-    end
-  end 
-end 
+#     json = JSON.parse(results)
+#     name.update(json) 
+#     end
+#   end 
+# end 

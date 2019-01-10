@@ -16,14 +16,14 @@ class CABreweries::CLI
   end 
   
   
-  def brweriews_by_city
+  def breweries_by_city
     puts "To see a list of breweries and their details, please enter the city you in which you wish to search:" 
   # here is where we pull from the api the CA cities and their respective breweries + details 
   
     # CABreweries::API.get_breweries
   end 
   
-  def brweriews_by_name
+  def breweries_by_name
   puts "To see a brewery and its details, please enter the brewery's name you wish to search:" 
   # here is where we pull from the api the and the respective brewery + details 
   end
