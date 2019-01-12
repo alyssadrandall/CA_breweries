@@ -1,3 +1,5 @@
+require "open-uri"
+require "pry"
 require_relative "./CA_breweries/version"
 require_relative "./CA_breweries/API"
 require_relative "./CA_breweries/Brewery"
